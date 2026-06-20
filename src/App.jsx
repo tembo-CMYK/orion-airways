@@ -111,16 +111,16 @@ export default function App() {
     if (isAnyModalOpen) {
       document.body.style.overflow = 'hidden';
       document.documentElement.style.overflow = 'hidden';
-      window.lenis?.stop();
+      window.orionLenis?.stop();
     } else {
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
-      window.lenis?.start();
+      window.orionLenis?.start();
     }
     return () => {
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
-      window.lenis?.start();
+      window.orionLenis?.start();
     };
   }, [isAnyModalOpen]);
 

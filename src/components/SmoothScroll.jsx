@@ -17,7 +17,7 @@ export default function SmoothScroll({ children }) {
       syncTouch: false,
     });
 
-    window.lenis = lenis;
+    window.orionLenis = lenis;
 
     // Synchronize Lenis scrolling timeline with GSAP ScrollTrigger updates
     lenis.on('scroll', () => {
@@ -55,7 +55,7 @@ export default function SmoothScroll({ children }) {
 
     return () => {
       lenis.destroy();
-      window.lenis = null;
+      window.orionLenis = null;
       gsap.ticker.remove(updateTicker);
       document.removeEventListener('click', handleAnchorClick);
     };
