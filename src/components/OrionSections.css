@@ -1,0 +1,231 @@
+:root {
+  --orion-bg: #050914;
+  --orion-panel: #0b101c;
+  --orion-panel-soft: rgba(255, 255, 255, 0.045);
+  --orion-gold: #d6ad32;
+  --orion-gold-soft: #f4d675;
+  --orion-white: #f4f5f7;
+  --orion-muted: #8f96a3;
+  --orion-border: rgba(214, 173, 50, 0.2);
+  --orion-line: rgba(255, 255, 255, 0.06);
+}
+
+.orion-section {
+  background: var(--orion-bg);
+  color: var(--orion-white);
+  font-family: "Outfit", "Inter", sans-serif;
+  padding: 80px 8vw;
+}
+
+.orion-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.orion-kicker {
+  color: var(--orion-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 9px;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+
+.orion-section-header {
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.orion-section-header h2,
+.orion-concierge-content h2 {
+  font-size: clamp(22px, 2.8vw, 34px);
+  line-height: 1.2;
+  font-weight: 200;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+}
+
+.orion-section-header h2 span,
+.orion-concierge-content h2 span {
+  color: var(--orion-gold-soft);
+}
+
+.orion-section-header p,
+.orion-lead {
+  color: var(--orion-muted);
+  font-size: 12.5px;
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.orion-tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.orion-tier-card {
+  min-height: 380px;
+  padding: 24px;
+  border: 1px solid var(--orion-border);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)),
+    var(--orion-panel);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.orion-tier-label {
+  color: var(--orion-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 8px;
+  font-weight: 300;
+}
+
+.orion-tier-card h3 {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.orion-tier-description {
+  color: var(--orion-muted);
+  font-size: 11.5px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.orion-tier-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0;
+}
+
+.orion-tier-card li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--orion-line);
+  color: #b1b5be;
+  font-size: 11.5px;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+}
+
+.orion-outline-btn,
+.orion-gold-btn {
+  height: 36px;
+  padding: 0 20px;
+  background: transparent;
+  color: var(--orion-gold);
+  border: 1px solid var(--orion-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 9px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.orion-outline-btn:hover {
+  background: var(--orion-gold);
+  color: #050914;
+}
+
+.orion-gold-btn {
+  background: var(--orion-gold);
+  color: #050914;
+  margin-top: 20px;
+}
+
+.orion-gold-btn:hover {
+  background: var(--orion-gold-soft);
+}
+
+.orion-concierge {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 550px;
+  padding: 0;
+}
+
+.orion-concierge-image {
+  position: relative;
+  background:
+    url("/images/orion-concierge-lounge.jpg") center/cover no-repeat;
+  min-height: 400px;
+}
+
+.orion-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+}
+
+.orion-concierge-content {
+  padding: 50px 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.orion-service-list {
+  margin-top: 24px;
+  border-top: 1px solid var(--orion-line);
+}
+
+.orion-service-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--orion-line);
+}
+
+.orion-service-item span {
+  color: var(--orion-gold);
+  letter-spacing: 0.1em;
+  font-size: 10px;
+  font-weight: 300;
+  margin-top: 2px;
+}
+
+.orion-service-item h3 {
+  margin: 0 0 4px;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+}
+
+.orion-service-item p {
+  color: var(--orion-muted);
+  font-size: 11.5px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 980px) {
+  .orion-tier-grid,
+  .orion-concierge {
+    grid-template-columns: 1fr;
+  }
+
+  .orion-section {
+    padding: 50px 6vw;
+  }
+
+  .orion-tier-card {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .orion-concierge-content {
+    padding: 40px 6vw;
+  }
+}
