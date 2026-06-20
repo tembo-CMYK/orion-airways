@@ -140,7 +140,7 @@ export default function ConciergeServices({ onExploreConcierge }) {
       <div className="orion-concierge-image overflow-hidden relative">
         <img
           ref={imageRef}
-          src="/images/orion-concierge-lounge.jpg"
+          src={`${import.meta.env.BASE_URL}images/orion-concierge-lounge.jpg`}
           alt="Orion Concierge Lounge"
           className="absolute inset-0 w-full h-full object-cover brightness-[0.55] origin-center"
         />
