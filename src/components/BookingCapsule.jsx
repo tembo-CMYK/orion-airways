@@ -83,6 +83,20 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Smooth scroll into view when capsule comes into focus
+  useEffect(() => {
+    if (isInteracted && containerRef.current) {
+      if (window.orionLenis) {
+        window.orionLenis.scrollTo(containerRef.current, {
+          offset: -140, // Perfect offset to center it below the header
+          duration: 1.2,
+        });
+      } else {
+        containerRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  }, [isInteracted]);
+
   // Filter destinations based on typing
   const filteredFromDestinations = destinations.filter(d => 
     d.city.toLowerCase().includes(fromSearch.toLowerCase()) || 
@@ -195,7 +209,7 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35, ease: 'easeOut' }}
-            className="fixed inset-0 z-40 bg-[#03050a]/75 backdrop-blur-[3px] pointer-events-auto cursor-pointer"
+            className="fixed inset-0 z-40 bg-[radial-gradient(circle_at_center,_rgba(212,175,55,0.08)_0%,_rgba(3,5,10,0.92)_70%)] backdrop-blur-[6px] pointer-events-auto cursor-pointer"
             onClick={(e) => {
               e.stopPropagation();
               setActiveDropdown(null);
@@ -210,7 +224,7 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
           whileHover={{ scale: 1.01 }}
           animate={{
             boxShadow: isInteracted
-              ? "0 35px 80px -15px rgba(212, 175, 55, 0.15), 0 20px 60px -10px rgba(0, 0, 0, 0.7)"
+              ? "0 35px 80px -15px rgba(0, 0, 0, 0.85), 0 20px 60px -10px rgba(0, 0, 0, 0.65)"
               : "0 25px 60px -20px rgba(0, 0, 0, 0.5)",
             borderRadius: isMobile ? "20px" : (isExpanded ? "28px" : "32px")
           }}
