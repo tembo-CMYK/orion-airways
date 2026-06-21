@@ -215,7 +215,7 @@ export default function App() {
                     initial={{ opacity: 0, y: 25 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.4, delay: 1.0, ease: luxuryEase }}
-                    className="w-full max-w-6xl mt-4"
+                    className="w-full max-w-6xl mt-4 h-auto md:h-[64px]"
                   >
                     <BookingCapsule 
                       onSearchSubmit={handleSearchSubmit} 

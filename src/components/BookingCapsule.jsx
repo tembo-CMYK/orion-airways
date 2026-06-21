@@ -194,10 +194,10 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
             boxShadow: isInteracted
               ? "0 35px 80px -15px rgba(212, 175, 55, 0.15), 0 20px 60px -10px rgba(0, 0, 0, 0.7)"
               : "0 25px 60px -20px rgba(0, 0, 0, 0.5)",
-            borderRadius: isMobile ? "20px" : (isExpanded ? "28px" : "9999px")
+            borderRadius: isMobile ? "20px" : (isExpanded ? "28px" : "32px")
           }}
           transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full backdrop-blur-xl bg-white/5 border border-white/10 p-4 md:p-2 md:pl-8 flex flex-col items-stretch justify-start transition-all duration-300"
+          className="w-full backdrop-blur-xl bg-white/5 border border-white/10 p-4 md:p-2 md:pl-8 flex flex-col items-stretch justify-start"
         >
           {/* Row 1: Primary Fields + Search Button */}
           <div className="flex flex-col md:flex-row items-stretch md:items-center gap-4 md:gap-0 w-full">
