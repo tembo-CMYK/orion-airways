@@ -412,8 +412,8 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
               <div className="hidden md:block h-8 w-[1px] bg-white/10 flex-shrink-0" />
               <div className="block md:hidden h-[1px] bg-white/10 w-full" />
 
-              {/* Zone 4: Passengers & Class + More Options Trigger */}
-              <div className="flex-1 flex items-center justify-between pr-2 hover:bg-white/5 md:hover:bg-transparent transition-colors duration-300 rounded-b-xl md:rounded-none relative">
+              {/* Zone 4: Passengers & Class */}
+              <div className="flex-1 flex items-center justify-between hover:bg-white/5 md:hover:bg-transparent transition-colors duration-300 rounded-b-xl md:rounded-none relative">
                 <div 
                   onClick={() => {
                     setActiveDropdown('passengers');
@@ -433,19 +433,6 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
                     </span>
                   </div>
                 </div>
-
-                {/* More Options Link Trigger */}
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setIsExpanded(!isExpanded);
-                    setIsInteracted(true);
-                  }}
-                  className="text-[12px] md:text-[9px] uppercase font-light tracking-[0.15em] text-white/40 hover:text-accent transition-colors h-[48px] px-6 md:h-auto md:py-2 md:px-3.5 hover:bg-white/10 rounded-full select-none flex-shrink-0 cursor-pointer border border-white/5 hover:border-white/10 mr-2 md:mr-0 flex items-center justify-center"
-                >
-                  {isExpanded ? 'Less' : 'More'}
-                </button>
 
                 {/* Custom Passenger/Class Dropdown */}
                 <AnimatePresence>
@@ -540,12 +527,27 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
 
             </div>
 
+            {/* More Options Link Trigger */}
+            <div className="flex items-center justify-center px-4 py-2 md:py-0 md:px-3 flex-shrink-0">
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsExpanded(!isExpanded);
+                  setIsInteracted(true);
+                }}
+                className="text-[12px] md:text-[9px] uppercase font-light tracking-[0.15em] text-white/40 hover:text-accent transition-colors h-[48px] px-6 md:h-auto md:py-2 md:px-3.5 hover:bg-white/10 rounded-full select-none flex-shrink-0 cursor-pointer border border-white/5 hover:border-white/10 flex items-center justify-center"
+              >
+                {isExpanded ? 'Less' : 'More'}
+              </button>
+            </div>
+
             {/* Search Action Button */}
             <motion.button
               type="submit"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full h-[48px] px-8 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-xl md:rounded-full bg-accent text-navy-950 flex items-center justify-center gap-2 hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 flex-shrink-0 md:py-0 self-center md:self-auto font-light text-[12px] md:text-sm uppercase md:normal-case tracking-[0.1em] md:tracking-normal cursor-pointer"
+              className="w-full h-[48px] px-8 md:w-12 md:h-12 rounded-xl md:rounded-full bg-accent text-navy-950 flex items-center justify-center gap-2 hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 flex-shrink-0 md:py-0 self-center md:self-auto font-light text-[12px] md:text-sm uppercase md:normal-case tracking-[0.1em] md:tracking-normal cursor-pointer"
             >
               <span className="md:hidden">Search Flights</span>
               <ArrowRight size={16} strokeWidth={2} className="text-navy-950" />
