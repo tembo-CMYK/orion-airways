@@ -41,7 +41,7 @@ function MagneticButton({ children, className, onClick }) {
     <div
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="inline-flex items-center justify-center cursor-pointer group mt-2 align-self-start"
+      className="inline-flex md:inline-flex w-full md:w-auto items-center justify-center cursor-pointer group mt-2 align-self-stretch md:align-self-start"
     >
       <button ref={buttonRef} onClick={onClick} className={className}>
         {children}

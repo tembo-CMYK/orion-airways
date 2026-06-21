@@ -279,5 +279,6 @@
     padding: 0 28px;
     font-size: 12px;
     line-height: 46px; /* center alignment */
+    width: 100%;
   }
 }

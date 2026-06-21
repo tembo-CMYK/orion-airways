@@ -150,7 +150,7 @@ export default function ExperienceManifesto({ onLearnMoreClick }) {
                 onLearnMoreClick();
               }
             }}
-            className="mt-6 h-[48px] px-8 text-[12px] font-light tracking-[0.2em] uppercase border border-accent bg-accent/5 hover:bg-accent text-accent hover:text-navy-950 transition-all duration-300 rounded-sm cursor-pointer flex items-center justify-center w-fit"
+            className="mt-6 h-[48px] px-8 text-[12px] font-light tracking-[0.2em] uppercase border border-accent bg-accent/5 hover:bg-accent text-accent hover:text-navy-950 transition-all duration-300 rounded-sm cursor-pointer flex items-center justify-center w-full md:w-fit"
           >
             Learn More
           </button>
