@@ -339,17 +339,17 @@ export default function DestinationsGallery({ onSelectDestination }) {
       <div className="absolute bottom-12 right-8 md:bottom-16 md:right-24 z-20 flex items-center gap-3">
         <button
           onClick={prevSlide}
-          className="p-3 border border-white/10 rounded-full bg-white/5 hover:bg-white/10 transition-all text-white/80 hover:text-white cursor-pointer"
+          className="w-12 h-12 md:w-10 md:h-10 flex items-center justify-center border border-white/10 rounded-full bg-white/5 hover:bg-white/10 transition-all text-white/80 hover:text-white cursor-pointer"
           aria-label="Previous Destination"
         >
-          <ArrowLeft size={14} />
+          <ArrowLeft size={18} className="md:w-3.5 md:h-3.5" />
         </button>
         <button
           onClick={nextSlide}
-          className="p-3 border border-white/10 rounded-full bg-white/5 hover:bg-white/10 transition-all text-white/80 hover:text-white cursor-pointer"
+          className="w-12 h-12 md:w-10 md:h-10 flex items-center justify-center border border-white/10 rounded-full bg-white/5 hover:bg-white/10 transition-all text-white/80 hover:text-white cursor-pointer"
           aria-label="Next Destination"
         >
-          <ArrowRight size={14} />
+          <ArrowRight size={18} className="md:w-3.5 md:h-3.5" />
         </button>
       </div>
 
