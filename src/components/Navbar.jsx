@@ -81,15 +81,15 @@ export default function Navbar({ onManageBookingClick, onHelpItemClick }) {
           {/* Left Zone: Logo */}
           <div className="flex-shrink-0">
             <a href="#" className="flex items-center gap-3 group">
-              <svg className="h-8 w-auto text-white" viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className="h-[38px] md:h-8 w-auto text-white" viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 {/* Stylized geometric wing logo */}
                 <path d="M10 20 L30 8 L55 20 L22 25 Z" fill="url(#goldGrad)" />
                 <path d="M30 8 L40 14 L55 20 L30 8 Z" fill="#ffffff" opacity="0.8" />
                 <path d="M15 22 L32 14 L46 22 L24 25 Z" fill="#ffffff" opacity="0.3" />
                 
                 {/* Luxury Typography Logo Text */}
-                <text x="68" y="23" fill="#ffffff" fontSize="13" fontWeight="300" letterSpacing="0.25em" fontFamily="Outfit, sans-serif">ORION</text>
-                <text x="68" y="32" fill="#D4AF37" fontSize="8" fontWeight="400" letterSpacing="0.4em" fontFamily="Outfit, sans-serif">AIRWAYS</text>
+                <text x="68" y="21" fill="#ffffff" className="text-[18px] md:text-[13px]" fontWeight="300" letterSpacing="0.25em" fontFamily="Outfit, sans-serif">ORION</text>
+                <text x="68" y="33" fill="#D4AF37" className="text-[10.5px] md:text-[8px]" fontWeight="400" letterSpacing="0.4em" fontFamily="Outfit, sans-serif">AIRWAYS</text>
                 
                 <defs>
                   <linearGradient id="goldGrad" x1="10" y1="8" x2="55" y2="25" gradientUnits="userSpaceOnUse">
