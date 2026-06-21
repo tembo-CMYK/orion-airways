@@ -547,9 +547,8 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
               type="submit"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full h-[48px] px-8 md:w-12 md:h-12 rounded-xl md:rounded-full bg-accent text-navy-950 flex items-center justify-center gap-2 hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 flex-shrink-0 md:py-0 self-center md:self-auto font-light text-[12px] md:text-sm uppercase md:normal-case tracking-[0.1em] md:tracking-normal cursor-pointer"
+              className="w-12 h-12 rounded-full bg-accent text-navy-950 flex items-center justify-center hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 flex-shrink-0 self-center cursor-pointer"
             >
-              <span className="md:hidden">Search Flights</span>
               <ArrowRight size={16} strokeWidth={2} className="text-navy-950" />
             </motion.button>
           </div>
