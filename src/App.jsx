@@ -192,7 +192,7 @@ export default function App() {
                     initial={{ opacity: 0, y: 35, filter: 'blur(8px)' }}
                     animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                     transition={{ duration: 1.5, delay: 0.4, ease: luxuryEase }}
-                    className="text-[32px] sm:text-[36px] md:text-7xl font-extralight tracking-tight leading-[1.1] text-white"
+                    className="text-[42px] sm:text-[48px] md:text-7xl font-extralight tracking-tight leading-[1.1] text-white"
                   >
                     Elevating the <br />
                     <span className="font-light text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-accent">
