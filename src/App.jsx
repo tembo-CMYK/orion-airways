@@ -300,7 +300,7 @@ export default function App() {
                   animate={{ scale: 1, y: 0, opacity: 1 }}
                   exit={{ scale: 0.95, y: 20, opacity: 0 }}
                   transition={{ duration: 0.5, ease: luxuryEase }}
-                  className="bg-navy-950/98 border border-white/10 p-8 rounded-2xl w-full max-w-lg shadow-2xl relative z-10 max-h-[90vh] overflow-y-auto"
+                  className="bg-navy-950/98 border border-white/10 p-8 rounded-2xl w-full max-w-lg shadow-2xl relative z-10 max-h-[90dvh] overflow-y-auto"
                   data-lenis-prevent
                 >
                   <button 
@@ -371,7 +371,7 @@ export default function App() {
                   animate={{ x: 0 }}
                   exit={{ x: '100%' }}
                   transition={{ duration: 0.6, ease: luxuryEase }}
-                  className="h-screen md:h-[100dvh] w-full max-w-xl bg-navy-950/98 border-l border-white/10 shadow-2xl flex flex-col overflow-hidden text-white relative z-10"
+                  className="h-[100dvh] w-full max-w-xl bg-navy-950/98 border-l border-white/10 shadow-2xl flex flex-col overflow-hidden text-white relative z-10"
                 >
                   <div className="flex items-center justify-between px-8 py-6 border-b border-white/5 flex-shrink-0">
                     <div>
@@ -448,7 +448,7 @@ export default function App() {
                   animate={{ scale: 1, y: 0, opacity: 1 }}
                   exit={{ scale: 0.95, y: 20, opacity: 0 }}
                   transition={{ duration: 0.5, ease: luxuryEase }}
-                  className="bg-navy-950/98 border border-white/10 p-8 rounded-2xl w-full max-w-md shadow-2xl relative z-10 max-h-[90vh] overflow-y-auto"
+                  className="bg-navy-950/98 border border-white/10 p-8 rounded-2xl w-full max-w-md shadow-2xl relative z-10 max-h-[90dvh] overflow-y-auto"
                   onClick={(e) => e.stopPropagation()}
                   data-lenis-prevent
                 >
@@ -508,7 +508,7 @@ export default function App() {
                   animate={{ scale: 1, y: 0, opacity: 1 }}
                   exit={{ scale: 0.95, y: 20, opacity: 0 }}
                   transition={{ duration: 0.5, ease: luxuryEase }}
-                  className="bg-navy-950/98 border border-white/10 p-8 rounded-2xl w-full max-w-md shadow-2xl relative z-10 text-left max-h-[90vh] overflow-y-auto"
+                  className="bg-navy-950/98 border border-white/10 p-8 rounded-2xl w-full max-w-md shadow-2xl relative z-10 text-left max-h-[90dvh] overflow-y-auto"
                   onClick={(e) => e.stopPropagation()}
                   data-lenis-prevent
                 >
@@ -563,7 +563,7 @@ export default function App() {
                   animate={{ y: 0 }}
                   exit={{ y: '100%' }}
                   transition={{ duration: 0.7, ease: luxuryEase }}
-                  className="bg-navy-950 border-t border-white/10 rounded-t-2xl shadow-2xl flex flex-col overflow-hidden text-white relative z-10 max-h-[85vh] md:max-h-[70vh] w-full"
+                  className="bg-navy-950 border-t border-white/10 rounded-t-2xl shadow-2xl flex flex-col overflow-hidden text-white relative z-10 max-h-[85dvh] md:max-h-[70dvh] w-full"
                 >
                   {/* Header */}
                   <div className="flex items-center justify-between px-8 py-6 border-b border-white/5 flex-shrink-0">

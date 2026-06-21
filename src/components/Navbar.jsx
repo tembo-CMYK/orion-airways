@@ -38,6 +38,23 @@ export default function Navbar({ onManageBookingClick, onHelpItemClick }) {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+      window.orionLenis?.stop();
+    } else {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+      window.orionLenis?.start();
+    }
+    return () => {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+      window.orionLenis?.start();
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <>
       <motion.header

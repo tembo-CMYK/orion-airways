@@ -108,7 +108,7 @@ export default function FlightResultsDrawer({ isOpen, onClose, searchData }) {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed right-0 top-0 h-full w-full sm:w-[500px] md:w-[40%] bg-navy-950/95 border-l border-white/10 backdrop-blur-2xl z-[100] flex flex-col shadow-2xl overflow-hidden"
+            className="fixed right-0 top-0 h-[100dvh] w-full sm:w-[500px] md:w-[40%] bg-navy-950/95 border-l border-white/10 backdrop-blur-2xl z-[100] flex flex-col shadow-2xl overflow-hidden"
           >
             {/* Header */}
             <div className="flex items-center justify-between px-6 py-6 border-b border-white/5 flex-shrink-0">

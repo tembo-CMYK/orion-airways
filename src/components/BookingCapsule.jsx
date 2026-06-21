@@ -23,6 +23,17 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
   // Stacking interaction glow shadow
   const [isInteracted, setIsInteracted] = useState(false);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const containerRef = useRef(null);
   
   const { control, handleSubmit, setValue, watch } = useForm({
@@ -183,7 +194,7 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
             boxShadow: isInteracted
               ? "0 35px 80px -15px rgba(212, 175, 55, 0.15), 0 20px 60px -10px rgba(0, 0, 0, 0.7)"
               : "0 25px 60px -20px rgba(0, 0, 0, 0.5)",
-            borderRadius: isExpanded ? "28px" : "9999px"
+            borderRadius: isMobile ? "20px" : (isExpanded ? "28px" : "9999px")
           }}
           transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
           className="w-full backdrop-blur-xl bg-white/5 border border-white/10 p-4 md:p-2 md:pl-8 flex flex-col items-stretch justify-start transition-all duration-300"
@@ -192,7 +203,7 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
           <div className="flex flex-col md:flex-row items-stretch md:items-center gap-4 md:gap-0 w-full">
             
             {/* Main Field Zones */}
-            <div className="flex-1 flex flex-col md:flex-row items-stretch md:items-center gap-4 md:gap-0">
+            <div className="flex-1 flex flex-col md:flex-row items-stretch md:items-center gap-0">
               
               {/* Zone 1: From */}
               <div 
@@ -200,7 +211,7 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
                   setActiveDropdown('from');
                   setIsInteracted(true);
                 }}
-                className="flex-1 flex flex-col px-4 py-2 cursor-pointer group rounded-xl md:rounded-none hover:bg-white/5 transition-all duration-300 relative"
+                className="flex-1 flex flex-col px-4 py-2 cursor-pointer group rounded-t-xl md:rounded-none hover:bg-white/5 transition-all duration-300 relative"
               >
                 <span className={`text-[9px] uppercase font-light tracking-[0.15em] transition-all duration-300 select-none
                   ${activeDropdown === 'from' ? 'text-accent translate-x-0.5' : 'text-white/50 group-hover:text-white/80 group-hover:translate-x-0.5'}
@@ -261,6 +272,7 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
 
               {/* Separator 1 */}
               <div className="hidden md:block h-8 w-[1px] bg-white/10 flex-shrink-0" />
+              <div className="block md:hidden h-[1px] bg-white/10 w-full" />
 
               {/* Zone 2: To */}
               <div 
@@ -268,7 +280,7 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
                   setActiveDropdown('to');
                   setIsInteracted(true);
                 }}
-                className="flex-1 flex flex-col px-4 py-2 cursor-pointer group rounded-xl md:rounded-none hover:bg-white/5 transition-all duration-300 relative"
+                className="flex-1 flex flex-col px-4 py-2 cursor-pointer group rounded-none hover:bg-white/5 transition-all duration-300 relative"
               >
                 <span className={`text-[9px] uppercase font-light tracking-[0.15em] transition-all duration-300 select-none
                   ${activeDropdown === 'to' ? 'text-accent translate-x-0.5' : 'text-white/50 group-hover:text-white/80 group-hover:translate-x-0.5'}
@@ -329,6 +341,7 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
 
               {/* Separator 2 */}
               <div className="hidden md:block h-8 w-[1px] bg-white/10 flex-shrink-0" />
+              <div className="block md:hidden h-[1px] bg-white/10 w-full" />
 
               {/* Zone 3: Date */}
               <div 
@@ -336,7 +349,7 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
                   setActiveDropdown('date');
                   setIsInteracted(true);
                 }}
-                className="flex-1 flex flex-col px-4 py-2 cursor-pointer group rounded-xl md:rounded-none hover:bg-white/5 transition-all duration-300 relative"
+                className="flex-1 flex flex-col px-4 py-2 cursor-pointer group rounded-none hover:bg-white/5 transition-all duration-300 relative"
               >
                 <span className={`text-[9px] uppercase font-light tracking-[0.15em] transition-all duration-300 select-none
                   ${activeDropdown === 'date' ? 'text-accent translate-x-0.5' : 'text-white/50 group-hover:text-white/80 group-hover:translate-x-0.5'}
@@ -397,15 +410,16 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
 
               {/* Separator 3 */}
               <div className="hidden md:block h-8 w-[1px] bg-white/10 flex-shrink-0" />
+              <div className="block md:hidden h-[1px] bg-white/10 w-full" />
 
               {/* Zone 4: Passengers & Class + More Options Trigger */}
-              <div className="flex-1 flex items-center justify-between pr-2 hover:bg-white/5 md:hover:bg-transparent transition-colors duration-300 rounded-xl relative">
+              <div className="flex-1 flex items-center justify-between pr-2 hover:bg-white/5 md:hover:bg-transparent transition-colors duration-300 rounded-b-xl md:rounded-none relative">
                 <div 
                   onClick={() => {
                     setActiveDropdown('passengers');
                     setIsInteracted(true);
                   }}
-                  className="flex-1 flex flex-col px-4 py-2 cursor-pointer group rounded-xl md:rounded-none hover:bg-white/5 transition-all duration-300"
+                  className="flex-1 flex flex-col px-4 py-2 cursor-pointer group rounded-b-xl md:rounded-none hover:bg-white/5 md:hover:bg-transparent transition-all duration-300"
                 >
                   <span className={`text-[9px] uppercase font-light tracking-[0.15em] transition-all duration-300 select-none
                     ${activeDropdown === 'passengers' ? 'text-accent translate-x-0.5' : 'text-white/50 group-hover:text-white/80 group-hover:translate-x-0.5'}
