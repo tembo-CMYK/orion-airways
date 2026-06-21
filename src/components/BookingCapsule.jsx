@@ -187,7 +187,25 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
 
   return (
     <div className="relative w-full" ref={containerRef}>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      {/* Spotlight/Focus Backdrop to dim ambient distractions */}
+      <AnimatePresence>
+        {isInteracted && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.35, ease: 'easeOut' }}
+            className="fixed inset-0 z-40 bg-[#03050a]/75 backdrop-blur-[3px] pointer-events-auto cursor-pointer"
+            onClick={(e) => {
+              e.stopPropagation();
+              setActiveDropdown(null);
+              setIsInteracted(false);
+            }}
+          />
+        )}
+      </AnimatePresence>
+
+      <form onSubmit={handleSubmit(onSubmit)} className="relative z-50">
         <motion.div
           whileHover={{ scale: 1.01 }}
           animate={{
