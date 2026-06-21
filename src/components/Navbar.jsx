@@ -200,7 +200,7 @@ export default function Navbar({ onManageBookingClick, onHelpItemClick }) {
                   inputEl.focus();
                 }
               }}
-              className="h-[48px] px-6 md:h-auto md:px-6 md:py-2.5 text-[12px] md:text-[11px] font-light tracking-[0.1em] uppercase border border-accent text-accent bg-transparent hover:bg-accent hover:text-navy-950 transition-all duration-300 rounded-sm cursor-pointer flex items-center justify-center"
+              className="hidden md:flex h-[48px] px-6 md:h-auto md:px-6 md:py-2.5 text-[12px] md:text-[11px] font-light tracking-[0.1em] uppercase border border-accent text-accent bg-transparent hover:bg-accent hover:text-navy-950 transition-all duration-300 rounded-sm cursor-pointer items-center justify-center"
             >
               Book Flight
             </motion.button>
@@ -209,10 +209,10 @@ export default function Navbar({ onManageBookingClick, onHelpItemClick }) {
             <div className="md:hidden flex items-center">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-1.5 text-white/80 hover:text-white transition-colors duration-200 focus:outline-none"
+                className="w-12 h-12 flex items-center justify-center text-white/80 hover:text-white transition-colors duration-200 focus:outline-none cursor-pointer"
                 aria-label="Toggle Menu"
               >
-                {isMobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
+                {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
               </button>
             </div>
 
