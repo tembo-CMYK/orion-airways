@@ -213,7 +213,7 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
                 }}
                 className="flex-1 flex flex-col px-4 py-2 cursor-pointer group rounded-t-xl md:rounded-none hover:bg-white/5 transition-all duration-300 relative"
               >
-                <span className={`text-[9px] uppercase font-light tracking-[0.15em] transition-all duration-300 select-none
+                <span className={`text-[12px] md:text-[9px] uppercase font-light tracking-[0.15em] transition-all duration-300 select-none
                   ${activeDropdown === 'from' ? 'text-accent translate-x-0.5' : 'text-white/50 group-hover:text-white/80 group-hover:translate-x-0.5'}
                 `}>
                   From
@@ -229,7 +229,7 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
                       setActiveDropdown('from');
                       setIsInteracted(true);
                     }}
-                    className="w-full bg-transparent text-white font-light text-sm outline-none border-none placeholder-white/30 focus:ring-0 p-0 cursor-pointer"
+                    className="w-full bg-transparent text-white font-light text-[16px] md:text-sm outline-none border-none placeholder-white/30 focus:ring-0 p-0 cursor-pointer"
                   />
                 </div>
 
@@ -282,7 +282,7 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
                 }}
                 className="flex-1 flex flex-col px-4 py-2 cursor-pointer group rounded-none hover:bg-white/5 transition-all duration-300 relative"
               >
-                <span className={`text-[9px] uppercase font-light tracking-[0.15em] transition-all duration-300 select-none
+                <span className={`text-[12px] md:text-[9px] uppercase font-light tracking-[0.15em] transition-all duration-300 select-none
                   ${activeDropdown === 'to' ? 'text-accent translate-x-0.5' : 'text-white/50 group-hover:text-white/80 group-hover:translate-x-0.5'}
                 `}>
                   To
@@ -298,7 +298,7 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
                       setActiveDropdown('to');
                       setIsInteracted(true);
                     }}
-                    className="w-full bg-transparent text-white font-light text-sm outline-none border-none placeholder-white/30 focus:ring-0 p-0 cursor-pointer"
+                    className="w-full bg-transparent text-white font-light text-[16px] md:text-sm outline-none border-none placeholder-white/30 focus:ring-0 p-0 cursor-pointer"
                   />
                 </div>
 
@@ -351,14 +351,14 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
                 }}
                 className="flex-1 flex flex-col px-4 py-2 cursor-pointer group rounded-none hover:bg-white/5 transition-all duration-300 relative"
               >
-                <span className={`text-[9px] uppercase font-light tracking-[0.15em] transition-all duration-300 select-none
+                <span className={`text-[12px] md:text-[9px] uppercase font-light tracking-[0.15em] transition-all duration-300 select-none
                   ${activeDropdown === 'date' ? 'text-accent translate-x-0.5' : 'text-white/50 group-hover:text-white/80 group-hover:translate-x-0.5'}
                 `}>
                   Departure
                 </span>
                 <div className="flex items-center gap-2 mt-1">
                   <CalendarIcon size={12} className="text-white/40 group-hover:text-accent transition-colors" />
-                  <span className="text-white font-light text-sm select-none">
+                  <span className="text-white font-light text-[16px] md:text-sm select-none">
                     {formatDate(dateVal)}
                   </span>
                 </div>
@@ -421,14 +421,14 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
                   }}
                   className="flex-1 flex flex-col px-4 py-2 cursor-pointer group rounded-b-xl md:rounded-none hover:bg-white/5 md:hover:bg-transparent transition-all duration-300"
                 >
-                  <span className={`text-[9px] uppercase font-light tracking-[0.15em] transition-all duration-300 select-none
+                  <span className={`text-[12px] md:text-[9px] uppercase font-light tracking-[0.15em] transition-all duration-300 select-none
                     ${activeDropdown === 'passengers' ? 'text-accent translate-x-0.5' : 'text-white/50 group-hover:text-white/80 group-hover:translate-x-0.5'}
                   `}>
                     Passengers & Class
                   </span>
                   <div className="flex items-center gap-2 mt-1">
                     <Users size={12} className="text-white/40 group-hover:text-accent transition-colors" />
-                    <span className="text-white font-light text-sm select-none">
+                    <span className="text-white font-light text-[16px] md:text-sm select-none">
                       {passengersVal.adults + passengersVal.children} Traveler{passengersVal.adults + passengersVal.children > 1 ? 's' : ''}, {passengersVal.cabinClass}
                     </span>
                   </div>
@@ -442,7 +442,7 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
                     setIsExpanded(!isExpanded);
                     setIsInteracted(true);
                   }}
-                  className="text-[9px] uppercase font-light tracking-[0.15em] text-white/40 hover:text-accent transition-colors py-2 px-3.5 hover:bg-white/10 rounded-full select-none flex-shrink-0 cursor-pointer border border-white/5 hover:border-white/10 mr-2 md:mr-0"
+                  className="text-[12px] md:text-[9px] uppercase font-light tracking-[0.15em] text-white/40 hover:text-accent transition-colors h-[48px] px-6 md:h-auto md:py-2 md:px-3.5 hover:bg-white/10 rounded-full select-none flex-shrink-0 cursor-pointer border border-white/5 hover:border-white/10 mr-2 md:mr-0 flex items-center justify-center"
                 >
                   {isExpanded ? 'Less' : 'More'}
                 </button>
@@ -469,15 +469,15 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
                             type="button"
                             disabled={passengersVal.adults <= 1}
                             onClick={() => setValue('passengers', { ...passengersVal, adults: passengersVal.adults - 1 })}
-                            className="w-6 h-6 rounded-full border border-white/10 hover:border-white/30 flex items-center justify-center text-white/70 hover:text-white disabled:opacity-20 transition-all text-xs"
+                            className="w-12 h-12 md:w-6 md:h-6 rounded-full border border-white/10 hover:border-white/30 flex items-center justify-center text-white/70 hover:text-white disabled:opacity-20 transition-all text-[16px] md:text-xs cursor-pointer"
                           >
                             -
                           </button>
-                          <span className="text-xs font-light text-white min-w-4 text-center">{passengersVal.adults}</span>
+                          <span className="text-[16px] md:text-xs font-light text-white min-w-4 text-center">{passengersVal.adults}</span>
                           <button
                             type="button"
                             onClick={() => setValue('passengers', { ...passengersVal, adults: passengersVal.adults + 1 })}
-                            className="w-6 h-6 rounded-full border border-white/10 hover:border-white/30 flex items-center justify-center text-white/70 hover:text-white transition-all text-xs"
+                            className="w-12 h-12 md:w-6 md:h-6 rounded-full border border-white/10 hover:border-white/30 flex items-center justify-center text-white/70 hover:text-white transition-all text-[16px] md:text-xs cursor-pointer"
                           >
                             +
                           </button>
@@ -495,15 +495,15 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
                             type="button"
                             disabled={passengersVal.children <= 0}
                             onClick={() => setValue('passengers', { ...passengersVal, children: passengersVal.children - 1 })}
-                            className="w-6 h-6 rounded-full border border-white/10 hover:border-white/30 flex items-center justify-center text-white/70 hover:text-white disabled:opacity-20 transition-all text-xs"
+                            className="w-12 h-12 md:w-6 md:h-6 rounded-full border border-white/10 hover:border-white/30 flex items-center justify-center text-white/70 hover:text-white disabled:opacity-20 transition-all text-[16px] md:text-xs cursor-pointer"
                           >
                             -
                           </button>
-                          <span className="text-xs font-light text-white min-w-4 text-center">{passengersVal.children}</span>
+                          <span className="text-[16px] md:text-xs font-light text-white min-w-4 text-center">{passengersVal.children}</span>
                           <button
                             type="button"
                             onClick={() => setValue('passengers', { ...passengersVal, children: passengersVal.children + 1 })}
-                            className="w-6 h-6 rounded-full border border-white/10 hover:border-white/30 flex items-center justify-center text-white/70 hover:text-white transition-all text-xs"
+                            className="w-12 h-12 md:w-6 md:h-6 rounded-full border border-white/10 hover:border-white/30 flex items-center justify-center text-white/70 hover:text-white transition-all text-[16px] md:text-xs cursor-pointer"
                           >
                             +
                           </button>
@@ -545,7 +545,7 @@ export default function BookingCapsule({ onSearchSubmit, prefilledTo, clearPrefi
               type="submit"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-xl md:rounded-full bg-accent text-navy-950 flex items-center justify-center gap-2 hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 flex-shrink-0 py-3 md:py-0 self-center md:self-auto font-light text-sm uppercase md:normal-case tracking-[0.1em] md:tracking-normal cursor-pointer"
+              className="w-full h-[48px] px-8 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-xl md:rounded-full bg-accent text-navy-950 flex items-center justify-center gap-2 hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20 flex-shrink-0 md:py-0 self-center md:self-auto font-light text-[12px] md:text-sm uppercase md:normal-case tracking-[0.1em] md:tracking-normal cursor-pointer"
             >
               <span className="md:hidden">Search Flights</span>
               <ArrowRight size={16} strokeWidth={2} className="text-navy-950" />

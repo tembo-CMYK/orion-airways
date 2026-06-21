@@ -76,7 +76,7 @@ export default function ClosingCTA() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent/[0.02] via-transparent to-transparent pointer-events-none" />
 
       {/* Narrative Headline */}
-      <h2 className="text-3xl sm:text-5xl md:text-6xl font-extralight tracking-wide text-white uppercase text-center mb-10 max-w-3xl leading-tight">
+      <h2 className="text-[24px] sm:text-5xl md:text-6xl font-extralight tracking-wide text-white uppercase text-center mb-10 max-w-3xl leading-[1.2]">
         Your Private Journey Awaits
       </h2>
 
@@ -89,7 +89,7 @@ export default function ClosingCTA() {
         <button
           ref={buttonRef}
           onClick={handleBookClick}
-          className="px-10 py-4.5 border border-white text-white text-xs sm:text-sm font-light tracking-[0.25em] uppercase hover:bg-white hover:text-navy-950 transition-colors duration-300 rounded-sm cursor-pointer relative z-10 select-none bg-transparent"
+          className="h-[48px] px-8 border border-white text-white text-[12px] font-light tracking-[0.25em] uppercase hover:bg-white hover:text-navy-950 transition-colors duration-300 rounded-sm cursor-pointer relative z-10 select-none bg-transparent flex items-center justify-center"
         >
           Book Your Flight
         </button>

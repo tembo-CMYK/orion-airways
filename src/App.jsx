@@ -181,7 +181,7 @@ export default function App() {
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.2, delay: 0.2, ease: luxuryEase }}
-                    className="flex items-center gap-3 text-accent text-[10px] md:text-xs font-light tracking-[0.3em] uppercase mb-6"
+                    className="flex items-center gap-3 text-accent text-[12px] md:text-xs font-light tracking-[0.3em] uppercase mb-6"
                   >
                     <span className="h-[1px] w-8 bg-accent/40" />
                     The New Standard of Private Travel
@@ -192,7 +192,7 @@ export default function App() {
                     initial={{ opacity: 0, y: 35, filter: 'blur(8px)' }}
                     animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                     transition={{ duration: 1.5, delay: 0.4, ease: luxuryEase }}
-                    className="text-4xl sm:text-5xl md:text-7xl font-extralight tracking-tight leading-[1.15] text-white"
+                    className="text-[32px] sm:text-[36px] md:text-7xl font-extralight tracking-tight leading-[1.1] text-white"
                   >
                     Elevating the <br />
                     <span className="font-light text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-accent">
@@ -205,7 +205,7 @@ export default function App() {
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.4, delay: 0.7, ease: luxuryEase }}
-                    className="mt-6 text-sm md:text-base font-light text-white/50 tracking-wider max-w-lg leading-relaxed mb-12"
+                    className="mt-6 text-[16px] md:text-base font-light text-white/50 tracking-wider max-w-lg leading-[1.5] mb-12"
                   >
                     Experience seamless global journeys tailored to the absolute highest tier of safety, discretion, and elegant luxury.
                   </motion.p>
@@ -343,7 +343,7 @@ export default function App() {
                       </select>
                     </div>
                     
-                    <button type="submit" className="w-full py-3 mt-4 text-[10px] font-light tracking-[0.2em] uppercase border border-accent bg-accent/10 hover:bg-accent text-accent hover:text-navy-950 transition-all duration-300 rounded-sm cursor-pointer">
+                    <button type="submit" className="w-full h-[48px] px-8 mt-4 text-[12px] font-light tracking-[0.2em] uppercase border border-accent bg-accent/10 hover:bg-accent text-accent hover:text-navy-950 transition-all duration-300 rounded-sm cursor-pointer flex items-center justify-center">
                       Submit Inquiry
                     </button>
                   </form>
@@ -419,7 +419,7 @@ export default function App() {
                         setIsMembershipModalOpen(true);
                         setSelectedTier("Concierge");
                       }}
-                      className="w-full py-3.5 text-[10px] font-light tracking-[0.2em] uppercase border border-accent bg-accent/10 hover:bg-accent text-accent hover:text-navy-950 transition-all duration-300 rounded-sm cursor-pointer mb-8"
+                      className="w-full h-[48px] px-8 text-[12px] font-light tracking-[0.2em] uppercase border border-accent bg-accent/10 hover:bg-accent text-accent hover:text-navy-950 transition-all duration-300 rounded-sm cursor-pointer mb-8 flex items-center justify-center"
                     >
                       Submit Bespoke Request
                     </button>
@@ -480,7 +480,7 @@ export default function App() {
                       <input required type="text" className="bg-white/5 border border-white/10 rounded px-4 py-2.5 text-xs text-white focus:outline-none focus:border-accent/40" placeholder="Mercer" />
                     </div>
                     
-                    <button type="submit" className="w-full py-3 mt-4 text-[10px] font-light tracking-[0.2em] uppercase border border-accent bg-accent/10 hover:bg-accent text-accent hover:text-navy-950 transition-all duration-300 rounded-sm cursor-pointer">
+                    <button type="submit" className="w-full h-[48px] px-8 mt-4 text-[12px] font-light tracking-[0.2em] uppercase border border-accent bg-accent/10 hover:bg-accent text-accent hover:text-navy-950 transition-all duration-300 rounded-sm cursor-pointer flex items-center justify-center">
                       Retrieve Flight
                     </button>
                   </form>
@@ -534,7 +534,7 @@ export default function App() {
                   
                   <button 
                     onClick={() => setHelpModalContent(null)}
-                    className="w-full py-3 mt-6 text-[10px] font-light tracking-[0.2em] uppercase border border-white/10 hover:bg-white/5 text-white transition-all duration-300 rounded-sm cursor-pointer"
+                    className="w-full h-[48px] px-8 mt-6 text-[12px] font-light tracking-[0.2em] uppercase border border-white/10 hover:bg-white/5 text-white transition-all duration-300 rounded-sm cursor-pointer flex items-center justify-center"
                   >
                     Close Window
                   </button>

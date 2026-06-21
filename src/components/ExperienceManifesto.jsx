@@ -78,18 +78,17 @@ export default function ExperienceManifesto({ onLearnMoreClick }) {
       >
         <div className="max-w-md flex flex-col gap-6">
           
-          {/* Section Heading */}
           <div className="flex flex-col gap-2">
-            <span className="text-accent text-[9px] md:text-[10px] font-light tracking-[0.3em] uppercase">
+            <span className="text-accent text-[12px] md:text-[10px] font-light tracking-[0.3em] uppercase">
               Our Commitment
             </span>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-extralight tracking-wide leading-tight text-white uppercase font-sans">
+            <h2 className="text-[24px] sm:text-4xl md:text-5xl font-extralight tracking-wide leading-[1.2] text-white uppercase font-sans">
               The New Standard of Flight
             </h2>
           </div>
 
           {/* Narrative Text block */}
-          <p className="text-white/60 text-xs sm:text-sm font-light leading-relaxed font-sans">
+          <p className="text-white/60 text-[16px] md:text-sm font-light leading-[1.5] font-sans">
             We believe that chartering a flight should represent an absolute release of concern. To that end, we have curated an operation that places discretion, sustainability, and absolute safety above all else. 
           </p>
 
@@ -104,8 +103,8 @@ export default function ExperienceManifesto({ onLearnMoreClick }) {
                 </svg>
               </div>
               <div className="flex flex-col gap-1">
-                <h4 className="text-xs font-normal text-white uppercase tracking-wider">Unrivaled Safety</h4>
-                <p className="text-[11px] sm:text-xs font-light text-white/45 leading-normal">
+                <h4 className="text-[14px] md:text-xs font-normal text-white uppercase tracking-wider">Unrivaled Safety</h4>
+                <p className="text-[12px] md:text-[11px] font-light text-white/45 leading-[1.4]">
                   Exceeding airline safety requirements with bi-annual captain audits and OEM inspections.
                 </p>
               </div>
@@ -119,8 +118,8 @@ export default function ExperienceManifesto({ onLearnMoreClick }) {
                 </svg>
               </div>
               <div className="flex flex-col gap-1">
-                <h4 className="text-xs font-normal text-white uppercase tracking-wider">Tailored Comfort</h4>
-                <p className="text-[11px] sm:text-xs font-light text-white/45 leading-normal">
+                <h4 className="text-[14px] md:text-xs font-normal text-white uppercase tracking-wider">Tailored Comfort</h4>
+                <p className="text-[12px] md:text-[11px] font-light text-white/45 leading-[1.4]">
                   Catering designed around your choices, private terminal drop-offs, and custom cabin setups.
                 </p>
               </div>
@@ -135,8 +134,8 @@ export default function ExperienceManifesto({ onLearnMoreClick }) {
                 </svg>
               </div>
               <div className="flex flex-col gap-1">
-                <h4 className="text-xs font-normal text-white uppercase tracking-wider">Sustainable Journeys</h4>
-                <p className="text-[11px] sm:text-xs font-light text-white/45 leading-normal">
+                <h4 className="text-[14px] md:text-xs font-normal text-white uppercase tracking-wider">Sustainable Journeys</h4>
+                <p className="text-[12px] md:text-[11px] font-light text-white/45 leading-[1.4]">
                   Minimizing ecological footprint through active flight-path optimizations and offset programs.
                 </p>
               </div>
@@ -144,7 +143,6 @@ export default function ExperienceManifesto({ onLearnMoreClick }) {
 
           </div>
 
-          {/* Learn More link triggering safety drawer */}
           <button 
             onClick={(e) => {
               e.preventDefault();
@@ -152,7 +150,7 @@ export default function ExperienceManifesto({ onLearnMoreClick }) {
                 onLearnMoreClick();
               }
             }}
-            className="mt-6 text-[10px] sm:text-[11px] font-light tracking-[0.2em] uppercase text-accent hover:text-white transition-colors duration-300 flex items-center gap-1.5 cursor-pointer border-b border-accent/20 hover:border-white/30 pb-0.5 w-fit"
+            className="mt-6 h-[48px] px-8 text-[12px] font-light tracking-[0.2em] uppercase border border-accent bg-accent/5 hover:bg-accent text-accent hover:text-navy-950 transition-all duration-300 rounded-sm cursor-pointer flex items-center justify-center w-fit"
           >
             Learn More
           </button>

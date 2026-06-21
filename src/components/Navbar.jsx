@@ -200,7 +200,7 @@ export default function Navbar({ onManageBookingClick, onHelpItemClick }) {
                   inputEl.focus();
                 }
               }}
-              className="px-4 py-2 md:px-6 md:py-2.5 text-[9px] md:text-[11px] font-light tracking-[0.1em] uppercase border border-accent text-accent bg-transparent hover:bg-accent hover:text-navy-950 transition-all duration-300 rounded-sm cursor-pointer"
+              className="h-[48px] px-6 md:h-auto md:px-6 md:py-2.5 text-[12px] md:text-[11px] font-light tracking-[0.1em] uppercase border border-accent text-accent bg-transparent hover:bg-accent hover:text-navy-950 transition-all duration-300 rounded-sm cursor-pointer flex items-center justify-center"
             >
               Book Flight
             </motion.button>
@@ -231,18 +231,18 @@ export default function Navbar({ onManageBookingClick, onHelpItemClick }) {
             transition={{ duration: 0.3, ease: 'easeOut' }}
             className="fixed inset-0 z-40 bg-navy-950/98 backdrop-blur-xl flex flex-col justify-center items-center gap-8 md:hidden"
           >
-            <div className="flex flex-col items-center gap-6 text-center pt-12 max-w-xs w-full">
+            <div className="flex flex-col items-center gap-4 text-center pt-12 max-w-xs w-full">
               <a
                 href="#destinations"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-base font-light tracking-[0.15em] uppercase text-white/80 hover:text-accent transition-colors duration-300 py-1"
+                className="text-[16px] font-light tracking-[0.15em] uppercase text-white/80 hover:text-accent transition-colors duration-300 h-[48px] flex items-center justify-center w-full"
               >
                 Destinations
               </a>
               <a
                 href="#experience"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-base font-light tracking-[0.15em] uppercase text-white/80 hover:text-accent transition-colors duration-300 py-1"
+                className="text-[16px] font-light tracking-[0.15em] uppercase text-white/80 hover:text-accent transition-colors duration-300 h-[48px] flex items-center justify-center w-full"
               >
                 Experience
               </a>
@@ -251,7 +251,7 @@ export default function Navbar({ onManageBookingClick, onHelpItemClick }) {
                   setIsMobileMenuOpen(false);
                   if (onManageBookingClick) onManageBookingClick();
                 }}
-                className="text-base font-light tracking-[0.15em] uppercase text-white/80 hover:text-accent transition-colors duration-300 py-1 bg-transparent border-none cursor-pointer"
+                className="text-[16px] font-light tracking-[0.15em] uppercase text-white/80 hover:text-accent transition-colors duration-300 h-[48px] flex items-center justify-center w-full bg-transparent border-none cursor-pointer"
               >
                 Manage Booking
               </button>
@@ -260,13 +260,13 @@ export default function Navbar({ onManageBookingClick, onHelpItemClick }) {
               
               <p className="text-[10px] font-extralight tracking-[0.2em] text-white/40 uppercase">Help & Guidelines</p>
               
-              <div className="flex flex-col gap-4 text-center">
+              <div className="flex flex-col gap-2 text-center w-full">
                 <button
                   onClick={() => {
                     setIsMobileMenuOpen(false);
                     if (onHelpItemClick) onHelpItemClick('status');
                   }}
-                  className="text-sm font-light tracking-[0.15em] text-white/60 hover:text-white transition-colors py-0.5 bg-transparent border-none cursor-pointer"
+                  className="text-[12px] font-light tracking-[0.15em] text-white/60 hover:text-white transition-colors h-[48px] flex items-center justify-center w-full bg-transparent border-none cursor-pointer"
                 >
                   Flight Status
                 </button>
@@ -275,7 +275,7 @@ export default function Navbar({ onManageBookingClick, onHelpItemClick }) {
                     setIsMobileMenuOpen(false);
                     if (onHelpItemClick) onHelpItemClick('baggage');
                   }}
-                  className="text-sm font-light tracking-[0.15em] text-white/60 hover:text-white transition-colors py-0.5 bg-transparent border-none cursor-pointer"
+                  className="text-[12px] font-light tracking-[0.15em] text-white/60 hover:text-white transition-colors h-[48px] flex items-center justify-center w-full bg-transparent border-none cursor-pointer"
                 >
                   Baggage Guidelines
                 </button>
@@ -284,7 +284,7 @@ export default function Navbar({ onManageBookingClick, onHelpItemClick }) {
                     setIsMobileMenuOpen(false);
                     if (onHelpItemClick) onHelpItemClick('assistance');
                   }}
-                  className="text-sm font-light tracking-[0.15em] text-white/60 hover:text-white transition-colors py-0.5 bg-transparent border-none cursor-pointer"
+                  className="text-[12px] font-light tracking-[0.15em] text-white/60 hover:text-white transition-colors h-[48px] flex items-center justify-center w-full bg-transparent border-none cursor-pointer"
                 >
                   Special Assistance
                 </button>

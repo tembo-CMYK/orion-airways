@@ -474,7 +474,7 @@ export default function FlightResultsDrawer({ isOpen, onClose, searchData }) {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => alert(`Charter Booking confirmed for flight ${selectedFlight.number}!`)}
-                      className="w-full py-3 mt-4 text-xs font-light tracking-[0.2em] uppercase border border-accent bg-accent/10 hover:bg-accent text-accent hover:text-navy-950 transition-all duration-300 rounded-sm cursor-pointer"
+                      className="w-full h-[48px] px-8 mt-4 text-[12px] font-light tracking-[0.2em] uppercase border border-accent bg-accent/10 hover:bg-accent text-accent hover:text-navy-950 transition-all duration-300 rounded-sm cursor-pointer flex items-center justify-center"
                     >
                       Confirm & Proceed
                     </motion.button>
